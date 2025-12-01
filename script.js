@@ -9,16 +9,16 @@
 
 // TODO: Replace these with your actual n8n webhook URLs
 const N8N_CONFIG = {
-    signupWebhook: 'https://your-n8n-instance.app.n8n.cloud/webhook/signup',
-    loginWebhook: 'https://your-n8n-instance.app.n8n.cloud/webhook/login',
-    resumeUploadWebhook: 'https://your-n8n-instance.app.n8n.cloud/webhook/resume-upload',
-    getUserDataWebhook: 'https://your-n8n-instance.app.n8n.cloud/webhook/get-user-data'
+    signupWebhook: ' https://datamasterdec.app.n8n.cloud/webhook/signup',
+    loginWebhook: 'https://datamasterdec.app.n8n.cloud/webhook/login',
+    resumeUploadWebhook: 'https://datamasterdec.app.n8n.cloud/webhook/resume-upload',
+    getUserDataWebhook: 'https://datamasterdec.app.n8n.cloud/webhook/get-user-data'
 };
 
 // TODO: Replace with your Supabase configuration
 const SUPABASE_CONFIG = {
-    url: 'https://your-project.supabase.co',
-    anonKey: 'your-anon-key-here'
+    url: 'https://eqnyrhjsainqksbgkfzm.supabase.co',
+    anonKey: 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImVxbnlyaGpzYWlucWtzYmdrZnptIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NjQ2MTE4NjksImV4cCI6MjA4MDE4Nzg2OX0.MVxcrA4bh6lkPv-917c8E6L08BmCn-lbwT5dh_0TJfg'
 };
 
 // ===================================

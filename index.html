@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DataMaster Pro - Master Data Analytics & Land Your Dream Job</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Hero/Landing Section -->
+    <div id="hero-section" class="section active">
+        <div class="container">
+            <div class="logo">
+                <h1>📊 DataMaster Pro</h1>
+                <p class="tagline">Learn. Practice. Apply. Get Hired.</p>
+            </div>
+            
+            <div class="hero-content">
+                <h2>Your One-Stop Platform for Data Analyst Success</h2>
+                <p class="subtitle">Curated company lists • Interview practice • Skill building • Job tracking</p>
+                
+                <div class="cta-buttons">
+                    <button onclick="showLogin()" class="btn-primary">Login</button>
+                    <button onclick="showSignup()" class="btn-secondary">Create Account</button>
+                </div>
+            </div>
+            
+            <div class="features-grid">
+                <div class="feature-card">
+                    <span class="icon">🎯</span>
+                    <h3>Target Companies</h3>
+                    <p>Get curated lists of companies hiring Data Analysts</p>
+                </div>
+                <div class="feature-card">
+                    <span class="icon">💪</span>
+                    <h3>Practice Skills</h3>
+                    <p>Company-specific interview questions & exercises</p>
+                </div>
+                <div class="feature-card">
+                    <span class="icon">📈</span>
+                    <h3>Track Progress</h3>
+                    <p>Monitor applications and interview preparation</p>
+                </div>
+                <div class="feature-card">
+                    <span class="icon">🚀</span>
+                    <h3>Land Jobs</h3>
+                    <p>Structured path from learning to employment</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Login Section -->
+    <div id="login-section" class="section">
+        <div class="container">
+            <div class="auth-box">
+                <button onclick="showHero()" class="back-btn">← Back</button>
+                <h2>Welcome Back!</h2>
+                <p class="subtitle">Login to continue your journey</p>
+                
+                <form id="login-form" onsubmit="handleLogin(event)">
+                    <div class="form-group">
+                        <label for="login-username">Username or Email</label>
+                        <input type="text" id="login-username" required placeholder="Enter your username">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="login-password">Password</label>
+                        <input type="password" id="login-password" required placeholder="Enter your password">
+                    </div>
+                    
+                    <button type="submit" class="btn-primary btn-full">Login</button>
+                </form>
+                
+                <p class="switch-auth">Don't have an account? <a href="#" onclick="showSignup()">Sign up here</a></p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Signup Section -->
+    <div id="signup-section" class="section">
+        <div class="container">
+            <div class="auth-box">
+                <button onclick="showHero()" class="back-btn">← Back</button>
+                <h2>Join DataMaster Pro</h2>
+                <p class="subtitle">Start your data analyst career journey today</p>
+                
+                <form id="signup-form" onsubmit="handleSignup(event)">
+                    <div class="form-group">
+                        <label for="signup-name">Full Name</label>
+                        <input type="text" id="signup-name" required placeholder="John Doe">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="signup-username">Username</label>
+                        <input type="text" id="signup-username" required placeholder="johndoe123">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="signup-email">Email Address</label>
+                        <input type="email" id="signup-email" required placeholder="john@example.com">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="signup-password">Password</label>
+                        <input type="password" id="signup-password" required placeholder="Min. 8 characters">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="signup-resume">Upload Resume (PDF only)</label>
+                        <input type="file" id="signup-resume" accept=".pdf" required>
+                        <small>Max size: 5MB</small>
+                    </div>
+                    
+                    <button type="submit" class="btn-primary btn-full">Create Account</button>
+                </form>
+                
+                <p class="switch-auth">Already have an account? <a href="#" onclick="showLogin()">Login here</a></p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Resume Choice Section (for existing users) -->
+    <div id="resume-choice-section" class="section">
+        <div class="container">
+            <div class="choice-box">
+                <h2>Welcome back, <span id="user-name-display"></span>!</h2>
+                <p class="subtitle">Would you like to proceed with your existing resume or upload a new one?</p>
+                
+                <div class="resume-info">
+                    <p><strong>Current Resume:</strong> <span id="current-resume-name">resume_johndoe.pdf</span></p>
+                    <p><strong>Uploaded:</strong> <span id="resume-upload-date">Oct 15, 2024</span></p>
+                </div>
+                
+                <div class="choice-buttons">
+                    <button onclick="proceedWithExistingResume()" class="btn-primary">
+                        ✓ Use Existing Resume
+                    </button>
+                    <button onclick="showResumeUpload()" class="btn-secondary">
+                        📤 Upload New Resume
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- New Resume Upload Section -->
+    <div id="new-resume-section" class="section">
+        <div class="container">
+            <div class="auth-box">
+                <button onclick="showResumeChoice()" class="back-btn">← Back</button>
+                <h2>Upload New Resume</h2>
+                <p class="subtitle">Update your resume to improve your profile</p>
+                
+                <form id="new-resume-form" onsubmit="handleNewResume(event)">
+                    <div class="form-group">
+                        <label for="new-resume-file">Choose Resume (PDF only)</label>
+                        <input type="file" id="new-resume-file" accept=".pdf" required>
+                        <small>Max size: 5MB</small>
+                    </div>
+                    
+                    <button type="submit" class="btn-primary btn-full">Upload & Continue</button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <!-- Dashboard Section (After login/resume selection) -->
+    <div id="dashboard-section" class="section">
+        <div class="container">
+            <div class="dashboard-header">
+                <h2>Your Dashboard</h2>
+                <button onclick="handleLogout()" class="btn-logout">Logout</button>
+            </div>
+            
+            <div class="dashboard-content">
+                <div class="welcome-banner">
+                    <h3>Welcome, <span id="dashboard-user-name"></span>! 🎉</h3>
+                    <p>Your journey to becoming a successful Data Analyst starts here.</p>
+                </div>
+                
+                <div class="dashboard-grid">
+                    <div class="dashboard-card">
+                        <h4>🏢 Target Companies</h4>
+                        <p>Browse companies actively hiring Data Analysts</p>
+                        <button class="btn-secondary">Explore Companies</button>
+                    </div>
+                    
+                    <div class="dashboard-card">
+                        <h4>📝 Practice Interviews</h4>
+                        <p>Company-specific questions and mock interviews</p>
+                        <button class="btn-secondary">Start Practice</button>
+                    </div>
+                    
+                    <div class="dashboard-card">
+                        <h4>💼 My Applications</h4>
+                        <p>Track your job applications and progress</p>
+                        <button class="btn-secondary">View Applications</button>
+                    </div>
+                    
+                    <div class="dashboard-card">
+                        <h4>📊 Skill Assessment</h4>
+                        <p>Test your SQL, Python, and analytics skills</p>
+                        <button class="btn-secondary">Take Assessment</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Loading Overlay -->
+    <div id="loading-overlay" class="loading-overlay">
+        <div class="spinner"></div>
+        <p>Processing...</p>
+    </div>
+
+    <!-- Toast Notification -->
+    <div id="toast" class="toast"></div>
+
+    <!-- Link to external JavaScript file -->
+    <script src="script.js"></script>
+</body>
+</html>

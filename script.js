@@ -313,21 +313,14 @@ async function handleLogin(event) {
         showToast(`Welcome back, ${result.name}!`, 'success');
         
         // Check if user has existing resume
-        if (result.hasResume) {
-            // Show resume choice screen
-            document.getElementById('user-name-display').textContent = result.name;
-            document.getElementById('current-resume-name').textContent = result.resumeFileName;
-            document.getElementById('resume-upload-date').textContent = new Date(result.uploadDate).toLocaleDateString();
-            
-            setTimeout(() => {
-                showResumeChoice();
-            }, 1000);
-        } else {
-            // No resume found, go directly to upload
-            setTimeout(() => {
-                showResumeUpload();
-            }, 1000);
-        }
+  // Always show resume choice for existing users (they always have resume from signup)
+document.getElementById('user-name-display').textContent = result.name;
+document.getElementById('current-resume-name').textContent = result.resumeFileName;
+document.getElementById('resume-upload-date').textContent = new Date(result.uploadDate).toLocaleDateString();
+
+setTimeout(() => {
+    showResumeChoice();
+}, 1000);
         
     } catch (error) {
         hideLoading();

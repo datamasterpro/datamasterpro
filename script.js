@@ -9,7 +9,7 @@
 
 // TODO: Replace these with your actual n8n webhook URLs
 const N8N_CONFIG = {
-    signupWebhook: ' https://datamasterdec.app.n8n.cloud/webhook/signup',
+    signupWebhook: 'https://datamasterdec.app.n8n.cloud/webhook/signup',
     loginWebhook: 'https://datamasterdec.app.n8n.cloud/webhook/login',
     resumeUploadWebhook: 'https://datamasterdec.app.n8n.cloud/webhook/resume-upload',
     getUserDataWebhook: 'https://datamasterdec.app.n8n.cloud/webhook/get-user-data'

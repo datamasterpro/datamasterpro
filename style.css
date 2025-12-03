@@ -117,6 +117,21 @@ body {
     flex-wrap: wrap;
 }
 
+/* === HERO IMAGE === */
+.hero-image {
+    margin-top: var(--spacing-xl);
+    border-radius: var(--radius-lg);
+    overflow: hidden;
+    box-shadow: var(--shadow-xl);
+}
+
+.dashboard-img {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: var(--radius-lg);
+}
+
 /* === FEATURE CARDS === */
 .features-grid {
     display: grid;

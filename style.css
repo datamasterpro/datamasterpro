@@ -90,6 +90,19 @@ body {
     margin-bottom: var(--spacing-xl);
 }
 
+.tagline-description {
+    font-size: 1.1rem;
+    font-weight: 400;
+    opacity: 0.95;
+    margin-bottom: var(--spacing-md);
+    line-height: 1.8;
+}
+
+.tagline-description strong {
+    font-weight: 700;
+    color: #ffd700;
+}
+
 .hero-content {
     background: rgba(255, 255, 255, 0.15);
     backdrop-filter: blur(10px);

@@ -315,7 +315,7 @@ showToast(`Welcome back, ${userName}!`, 'success');
         
         // Check if user has existing resume
   // Always show resume choice for existing users (they always have resume from signup)
-document.getElementById('user-name-display').textContent = result.name;
+document.getElementById('user-name-display').textContent = userName;
 document.getElementById('current-resume-name').textContent = result.resumeFileName;
 document.getElementById('resume-upload-date').textContent = new Date(result.uploadDate).toLocaleDateString();
 

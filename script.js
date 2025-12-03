@@ -189,7 +189,12 @@ async function handleSignup(event) {
         showToast('Please upload your resume', 'error');
         return;
     }
-    
+
+   // FIX: enforce password minimum length
+if (!isValidPassword(password)) {
+    showToast('Password must be at least 8 characters', 'error');
+    return;
+}
     // Validate file size (max 5MB)
     if (!validateFileSize(resumeFile)) {
         showToast('Resume file size must be less than 5MB', 'error');

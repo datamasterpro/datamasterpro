@@ -175,34 +175,35 @@ function showDashboard() {
  * @param {Event} event - Form submit event
  */
 async function handleSignup(event) {
-    event.preventDefault(); // Prevent default form submission
+    event.preventDefault();
 
+    // Get password once (VALID)
     const password = document.getElementById("signup-password").value;
 
     // Prevent short passwords
     if (password.length < 8) {
         showToast("Password must be at least 8 characters long.");
-        return; // Stop submission
+        return;
     }
-   
-    // Get form input values
+
     const name = document.getElementById('signup-name').value;
     const username = document.getElementById('signup-username').value;
     const email = document.getElementById('signup-email').value;
-  //  const password = document.getElementById('signup-password').value;
+
+    // ❌ DO NOT REDECLARE password again here
+
     const resumeFile = document.getElementById('signup-resume').files[0];
-    
-    // Validate resume file exists
+
     if (!resumeFile) {
         showToast('Please upload your resume', 'error');
         return;
     }
 
-   // FIX: enforce password minimum length
-if (!isValidPassword(password)) {
-    showToast('Password must be at least 8 characters', 'error');
-    return;
-}
+    if (!isValidPassword(password)) {
+        showToast('Password must be at least 8 characters', 'error');
+        return;
+    }
+
     // Validate file size (max 5MB)
     if (!validateFileSize(resumeFile)) {
         showToast('Resume file size must be less than 5MB', 'error');

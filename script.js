@@ -310,7 +310,8 @@ async function handleLogin(event) {
         });
         
         hideLoading(); // Hide loading spinner
-        showToast(`Welcome back, ${result.name}!`, 'success');
+  const userName = result.name || result.username || 'User';
+showToast(`Welcome back, ${userName}!`, 'success');
         
         // Check if user has existing resume
   // Always show resume choice for existing users (they always have resume from signup)

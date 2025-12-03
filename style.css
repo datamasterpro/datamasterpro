@@ -117,59 +117,39 @@ body {
     flex-wrap: wrap;
 }
 
-/* === HERO IMAGE === */
-.hero-image {
-    margin-top: var(--spacing-xl);
-    border-radius: var(--radius-lg);
-    overflow: hidden;
-    box-shadow: var(--shadow-xl);
-}
-
-.dashboard-img {
-    width: 100%;
-    height: auto;
-    display: block;
-    border-radius: var(--radius-lg);
-}
-
-/* === FEATURE CARDS === */
-.features-grid {
+/* === FEATURES SHOWCASE === */
+.features-showcase {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
     gap: var(--spacing-md);
-    margin-top: var(--spacing-xl);
+    margin: var(--spacing-xl) 0;
 }
 
-.feature-card {
-    background: rgba(255, 255, 255, 0.95);
-    padding: var(--spacing-lg);
-    border-radius: var(--radius-md);
-    box-shadow: var(--shadow-lg);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+.feature-item {
     text-align: center;
 }
 
-.feature-card:hover {
-    transform: translateY(-5px);
-    box-shadow: var(--shadow-xl);
-}
-
-.feature-card .icon {
-    font-size: 3rem;
-    display: block;
+.feature-item img {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+    border-radius: var(--radius-md);
+    box-shadow: var(--shadow-lg);
     margin-bottom: var(--spacing-sm);
 }
 
-.feature-card h3 {
-    color: var(--primary-color);
-    margin-bottom: var(--spacing-xs);
-    font-size: 1.3rem;
+.feature-item p {
+    font-size: 1rem;
+    font-weight: 600;
+    color: var(--white);
 }
 
-.feature-card p {
-    color: var(--text-secondary);
-    font-size: 0.95rem;
+.cta-heading {
+    font-size: 1.8rem;
+    margin: var(--spacing-xl) 0 var(--spacing-md);
+    color: var(--white);
 }
+
 
 /* === AUTH BOXES (Login/Signup) === */
 .auth-box, .choice-box {

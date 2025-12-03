@@ -317,7 +317,12 @@ showToast(`Welcome back, ${userName}!`, 'success');
   // Always show resume choice for existing users (they always have resume from signup)
 document.getElementById('user-name-display').textContent = userName;
 document.getElementById('current-resume-name').textContent = result.resumeFileName;
-document.getElementById('resume-upload-date').textContent = new Date(result.uploadDate).toLocaleDateString();
+const uploadDate = result.uploadDate ? new Date(result.uploadDate).toLocaleDateString('en-US', {
+    year: 'numeric',
+    month: 'long',
+    day: 'numeric'
+}) : 'Recently';
+document.getElementById('resume-upload-date').textContent = uploadDate;
 
 setTimeout(() => {
     showResumeChoice();

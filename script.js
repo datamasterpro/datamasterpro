@@ -176,7 +176,15 @@ function showDashboard() {
  */
 async function handleSignup(event) {
     event.preventDefault(); // Prevent default form submission
-    
+
+    const password = document.getElementById("signup-password").value;
+
+    // Prevent short passwords
+    if (password.length < 8) {
+        showToast("Password must be at least 8 characters long.");
+        return; // Stop submission
+    }
+   
     // Get form input values
     const name = document.getElementById('signup-name').value;
     const username = document.getElementById('signup-username').value;

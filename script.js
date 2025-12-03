@@ -189,7 +189,7 @@ async function handleSignup(event) {
     const name = document.getElementById('signup-name').value;
     const username = document.getElementById('signup-username').value;
     const email = document.getElementById('signup-email').value;
-    const password = document.getElementById('signup-password').value;
+  //  const password = document.getElementById('signup-password').value;
     const resumeFile = document.getElementById('signup-resume').files[0];
     
     // Validate resume file exists

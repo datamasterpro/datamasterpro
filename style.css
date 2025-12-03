@@ -78,10 +78,12 @@ body {
 
 .logo h1 {
     font-size: 3.5rem;
-    font-weight: 800;
+    font-weight: 700;
     margin-bottom: var(--spacing-xs);
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+    letter-spacing: 1px;
 }
+
 
 .tagline {
     font-size: 1.5rem;
@@ -161,18 +163,20 @@ body {
 }
 
 .feature-label {
-    font-size: 1.1rem;
-    font-weight: 600;
+    font-size: 1rem;
+    font-weight: 500;
     color: var(--white);
-    letter-spacing: 0.5px;
+    letter-spacing: 0.3px;
+    line-height: 1.5;
 }
 
 .feature-label .highlight {
-    background: linear-gradient(135deg, #ffd700 0%, #ff8c00 100%);
-    padding: 2px 8px;
-    border-radius: 4px;
-    color: var(--dark);
+    background: linear-gradient(135deg, #2563eb 0%, #1e40af 100%);
+    padding: 3px 10px;
+    border-radius: 5px;
+    color: var(--white);
     font-weight: 700;
+    margin-right: 4px;
 }
 
 .cta-heading {

@@ -486,12 +486,19 @@ button, .btn-primary, .btn-secondary {
 /* === RESPONSIVE DESIGN === */
 @media (max-width: 768px) {
     .logo h1 {
-        font-size: 2.5rem;
-    }
+    font-size: 3.5rem;
+    font-weight: 700;
+    margin-bottom: var(--spacing-xs);
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+    letter-spacing: 1px;
+    color: var(--white);
+}
     
-    .hero-content h2 {
-        font-size: 1.8rem;
-    }
+   .hero-content h2 {
+    font-size: 2.5rem;
+    margin-bottom: var(--spacing-sm);
+    color: var(--white);
+}
     
     .cta-buttons {
         flex-direction: column;
@@ -520,9 +527,13 @@ button, .btn-primary, .btn-secondary {
         font-size: 2rem;
     }
     
-    .tagline {
-        font-size: 1.1rem;
-    }
+   .tagline {
+    font-size: 1.5rem;
+    font-weight: 500;
+    opacity: 0.95;
+    margin-bottom: var(--spacing-xl);
+    color: var(--white);
+}
     
     .container {
         padding: var(--spacing-sm);

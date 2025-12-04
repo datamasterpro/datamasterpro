@@ -114,6 +114,15 @@ body {
     border: 1px solid rgba(255, 255, 255, 0.2);
 }
 
+/* SHORTENED HEADLINE (centered + bold) */
+.main-title {
+    text-align: center;
+    font-size: 2.4rem;
+    font-weight: 800;
+    color: var(--white);
+    margin-bottom: 40px;
+}
+
 .hero-content h2 {
     font-size: 2.5rem;
     margin-bottom: var(--spacing-sm);
@@ -170,14 +179,36 @@ body {
     line-height: 1.5;
 }
 
-.feature-label .highlight {
-    background: linear-gradient(135deg, #3b82f6 0%, #6366f1 100%);
-    padding: 3px 10px;
-    border-radius: 5px;
-    color: var(--white);
-    font-weight: 700;
-    margin-right: 6px;
+/* ----------------------------------------------
+   COLOR VARIABLES (easy to update)
+------------------------------------------------*/
+:root {
+    --highlight-start: #4F8DFF;
+    --highlight-end: #6C7BFF;
+
+    --btn-primary-start: #1E2A78;
+    --btn-primary-end: #2C3A9A;
+
+    --btn-secondary-start: #5A7CFF;
+    --btn-secondary-end: #7A8BFF;
+
+    --white: #ffffff;
 }
+
+/* ----------------------------------------------
+   FEATURE HIGHLIGHT TAGS (Data / Master / Pro)
+------------------------------------------------*/
+.feature-label .highlight {
+    background: linear-gradient(135deg, var(--highlight-start), var(--highlight-end));
+    color: var(--white);
+    padding: 4px 12px;
+    border-radius: 8px;
+    font-weight: 700;
+    font-size: 0.85rem;
+    display: inline-block;
+    margin-right: 8px;
+}
+
 
 .cta-heading {
     font-size: 2rem;
@@ -200,26 +231,44 @@ button, .btn-primary, .btn-secondary {
     letter-spacing: 1px;
 }
 
+/* ----------------------------------------------
+   BUTTON STYLING
+------------------------------------------------*/
 .btn-primary {
-    background: linear-gradient(135deg, #2563eb 0%, #1e3a8a 100%);
+    background: linear-gradient(135deg, var(--btn-primary-start), var(--btn-primary-end));
     color: var(--white);
-    box-shadow: 0 4px 15px rgba(37, 99, 235, 0.35);
-}
-.btn-primary:hover {
-    background: linear-gradient(135deg, #1e3a8a 0%, #1e40af 100%);
-    transform: translateY(-3px);
-    box-shadow: 0 6px 20px rgba(37, 99, 235, 0.5);
+    border: none;
+    padding: 12px 28px;
+    border-radius: 10px;
+    font-size: 1rem;
+    font-weight: 700;
+    cursor: pointer;
+    transition: all 0.25s ease;
+    box-shadow: 0 4px 14px rgba(30, 42, 120, 0.25);
 }
 
-.btn-secondary {
-    background: linear-gradient(135deg, #6366f1 0%, #3b82f6 100%);
-    color: var(--white);
-    box-shadow: 0 4px 15px rgba(99, 102, 241, 0.4);
-}
-.btn-secondary:hover {
-    background: linear-gradient(135deg, #4f46e5 0%, #2563eb 100%);
+.btn-primary:hover {
     transform: translateY(-3px);
-    box-shadow: 0 6px 20px rgba(99, 102, 241, 0.6);
+    box-shadow: 0 6px 18px rgba(30, 42, 120, 0.45);
+}
+
+/* Secondary Button (Signup) */
+.btn-secondary {
+    background: linear-gradient(135deg, var(--btn-secondary-start), var(--btn-secondary-end));
+    color: var(--white);
+    border: none;
+    padding: 12px 28px;
+    border-radius: 10px;
+    font-size: 1rem;
+    font-weight: 700;
+    cursor: pointer;
+    transition: all 0.25s ease;
+    box-shadow: 0 4px 14px rgba(90, 124, 255, 0.25);
+}
+
+.btn-secondary:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 18px rgba(90, 124, 255, 0.45);
 }
 
 /* === AUTH BOXES (Login/Signup) === */
